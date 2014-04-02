@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="SpacebrewClient/dist/spacebrewclient-0.1.0-sources.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/SpacebrewClient/dist/spacebrewclient-0.1.0.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=SpacebrewClient/src&lt;at.ac.sbg.icts.spacebrew.client.publisher"/>
+        <javaElement handleIdentifier="=SpacebrewClient/src&lt;at.ac.sbg.icts.spacebrew.sensor"/>
+        <javaElement handleIdentifier="=SpacebrewClient/src&lt;at.ac.sbg.icts.spacebrew.client"/>
+    </selectedElements>
+</jardesc>
