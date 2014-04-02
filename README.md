@@ -54,19 +54,19 @@ For detailed examples please take a look at [src/example/Example.java](https://g
         @override
         public void onOpen()
         {
-            System.out.println(message);
+            System.out.println("Connection to server opened.");
         }
 
         @override
         public void onError()
         {
-            System.out.println(message);
+            System.out.println("Error occured.");
         }
         
                 @override
         public void onClose()
         {
-            System.out.println(message);
+            System.out.println("Connection to server closed.");
         }
     }
 
