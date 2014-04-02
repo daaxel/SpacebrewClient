@@ -16,11 +16,6 @@ Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spac
 * Offers another way to implement subscribers by objects that implement the subscriber interfaces
 * Offers an abstract range subscriber with simple low-pass filtering and linear transformation of input values
 
-## Contents
-* SpacebrewClient.jar - The redistributable JAR file for the API.
-* SpacebrewClient-sources.jar - The sources for the API.
-* example - An example to demonstrate use of the API. 
-
 ## Minimum Required JDK
 * Java 1.6
 * Android 1.6 (API 4)
@@ -32,12 +27,53 @@ Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spac
 * [slf4j-simple-1.7.2](http://www.slf4j.org) Required only if no other logger is used 
 
 ## Usage
-See src/example/Example.java
+For detailed examples please take a look at [src/example/Example.java](https://github.com/daaxel/SpacebrewClient/src/example/Example.java). A most basic example class using the library may look like this:
 
+```java
+
+    import at.ac.sbg.icts.spacebrew.client.*;
+    
+    public class Example implements SpacebrewClientCallback
+    {
+        public void main(String[] args)
+        {
+            SpacebrewClient client = new SpacebrewClient(this, "ws://sandbox.spacebrew.cc:9000", "SpacebrewClient", "A simple Java client");
+            client.connect();
+    
+            client.addPublisher("output","");
+            client.publish("string", "Hello world!");
+    
+            client.addSubscriber("input", "SpacebrewMessage.TYPE_STRING", "receive");
+        }
+        
+        public void receive(String message)
+        {
+            System.out.println(message);
+        }
+        
+        @override
+        public void onOpen()
+        {
+            System.out.println(message);
+        }
+
+        @override
+        public void onError()
+        {
+            System.out.println(message);
+        }
+        
+                @override
+        public void onClose()
+        {
+            System.out.println(message);
+        }
+    }
+
+```
 
 ## Support
 Contact the author at <axel.baumgartner@sbg.ac.at>.
 
-
 ## License
-See ``license.tx
+See [license.txt](https://github.com/daaxel/SpacebrewClient/license.txt)
