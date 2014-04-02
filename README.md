@@ -31,44 +31,42 @@ For detailed examples please take a look at [src/example/Example.java](https://g
 
 ```java
 
-    import at.ac.sbg.icts.spacebrew.client.*;
-    
-    public class Example implements SpacebrewClientCallback
-    {
-        public void main(String[] args)
-        {
-            SpacebrewClient client = new SpacebrewClient(this, "ws://sandbox.spacebrew.cc:9000", "SpacebrewClient", "A simple Java client");
-            client.connect();
-    
-            client.addPublisher("output","");
-            client.publish("string", "Hello world!");
-    
-            client.addSubscriber("input", "SpacebrewMessage.TYPE_STRING", "receive");
-        }
-        
-        public void receive(String message)
-        {
-            System.out.println("Received: " + message);
-        }
-        
-        @override
-        public void onOpen()
-        {
-            System.out.println("Connection to server opened.");
-        }
+	import at.ac.sbg.icts.spacebrew.client.*;
 
-        @override
-        public void onError()
-        {
-            System.out.println("Error occurred.");
-        }
+	public class Example implements SpacebrewClientCallback
+	{
+		public void main(String[] args)
+		{
+			SpacebrewClient client = new SpacebrewClient(this, "ws://sandbox.spacebrew.cc:9000", "SpacebrewClient", "A simple Java client");
+			client.connect();
+			client.addPublisher("output","");
+			client.publish("string", "Hello world!");
+   			client.addSubscriber("input", "SpacebrewMessage.TYPE_STRING", "receive");
+		}
         
-                @override
-        public void onClose()
-        {
-            System.out.println("Connection to server closed.");
-        }
-    }
+		public void receive(String message)
+		{
+			System.out.println("Received: " + message);
+		}
+        
+		 @override
+		public void onOpen()
+		{
+			System.out.println("Connection to server opened.");
+		}
+
+		@override
+		public void onError()
+		{
+			System.out.println("Error occurred.");
+		}
+        
+		@override
+		public void onClose()
+		{
+			System.out.println("Connection to server closed.");
+		}
+	}
 
 ```
 
