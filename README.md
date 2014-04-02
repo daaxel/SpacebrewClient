@@ -48,7 +48,7 @@ For detailed examples please take a look at [src/example/Example.java](https://g
         
         public void receive(String message)
         {
-            System.out.println(message);
+            System.out.println("Received: " + message);
         }
         
         @override
@@ -60,7 +60,7 @@ For detailed examples please take a look at [src/example/Example.java](https://g
         @override
         public void onError()
         {
-            System.out.println("Error occured.");
+            System.out.println("Error occurred.");
         }
         
                 @override
