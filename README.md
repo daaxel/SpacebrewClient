@@ -27,7 +27,7 @@ Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spac
 * [slf4j-simple-1.7.2](http://www.slf4j.org) Required only if no other logger is used 
 
 ## Usage
-For detailed examples please take a look at [src/example/Example.java](https://github.com/daaxel/SpacebrewClient/src/example/Example.java). A most basic example class using the library may look like this:
+For detailed examples please take a look at [src/example/Example.java](https://github.com/daaxel/SpacebrewClient/blob/master/src/example/Example.java). A most basic example class using the library may look like this:
 
 ```java
 
@@ -76,4 +76,4 @@ For detailed examples please take a look at [src/example/Example.java](https://g
 Contact the author at <axel.baumgartner@sbg.ac.at>.
 
 ## License
-See [license.txt](https://github.com/daaxel/SpacebrewClient/license.txt)
+See [license.txt](https://github.com/daaxel/SpacebrewClient/blob/master/license.txt)
