@@ -69,6 +69,19 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 	}
 
 ```
+## FAQ
+
+If you get the error ``"Could not pass incoming spacebrew message to callback, exception occurred 
+while calling callback method for subscriber... "`` then the code you wrote when receiving a message as 
+a subscriber throws an exception. Check the method you specified as callback. If you configure slf4j to use the debug log level, you will be 
+able to see the stacktrace of the cause. If you use SimpleLogger you can do this quickly by adding this line to your code:
+
+```java
+System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "DEBUG");
+```
+ 
+
+
 
 ## Support
 Contact the author at <axel.baumgartner@sbg.ac.at>.

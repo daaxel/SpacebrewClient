@@ -65,7 +65,8 @@ public class Example implements SpacebrewClientCallback
 	 */
 	public Example()
 	{
-		String serverUri = "ws://sandbox.spacebrew.cc:9000";
+		// String serverUri = "ws://sandbox.spacebrew.cc:9000";
+		String serverUri = "ws://spacebrew.icts.sbg.ac.at:9000";
 
 		/*
 		 * Create a SpacebrewClient instance. Does not connect to the server by
@@ -102,6 +103,8 @@ public class Example implements SpacebrewClientCallback
 		client.connect();
 	}
 
+	Object	test	= null;
+
 	/**
 	 * Called by SpacebrewClient as a callback method for the "switch"
 	 * subscriber.
@@ -111,6 +114,7 @@ public class Example implements SpacebrewClientCallback
 	public void switchInput(boolean input)
 	{
 		log.info("The switch turns: " + (input ? "on" : "off"));
+		log.info("" + test.getClass());
 	}
 
 	/**

@@ -802,7 +802,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_RANGE))
 				{
-					method.invoke(callback, sanitizeRangeMessage(message));
+					method.invoke(callback, sanitizeRangeMessage(value));
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_STRING))
 				{
@@ -839,16 +839,15 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 				subscriber = subscriberObjects.get(name).get(type);
 				if (type.equals(SpacebrewMessage.TYPE_BOOLEAN))
 				{
-					((BooleanSubscriber) subscriber).receive(Boolean.parseBoolean((String) message.get("value")));
+					((BooleanSubscriber) subscriber).receive(Boolean.parseBoolean(value));
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_RANGE))
 				{
-
-					((RangeSubscriber) subscriber).receive(sanitizeRangeMessage(message));
+					((RangeSubscriber) subscriber).receive(sanitizeRangeMessage(value));
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_STRING))
 				{
-					((StringSubscriber) subscriber).receive((String) message.get("value"));
+					((StringSubscriber) subscriber).receive(value);
 				}
 			}
 			catch (Exception e)
@@ -891,13 +890,13 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	 * @param message The unsanitized incoming range message
 	 * @return The sanitized <code>int</code> value
 	 */
-	private int sanitizeRangeMessage(JSONObject message)
+	private int sanitizeRangeMessage(String message)
 	{
 		int value = 0;
 
 		try
 		{
-			value = Integer.parseInt((String) message.get("value"));
+			value = Integer.parseInt(message);
 		}
 		catch (NumberFormatException e)
 		{
