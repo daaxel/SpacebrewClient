@@ -65,8 +65,7 @@ public class Example implements SpacebrewClientCallback
 	 */
 	public Example()
 	{
-		// String serverUri = "ws://sandbox.spacebrew.cc:9000";
-		String serverUri = "ws://spacebrew.icts.sbg.ac.at:9000";
+		String serverUri = "ws://sandbox.spacebrew.cc:9000";
 
 		/*
 		 * Create a SpacebrewClient instance. Does not connect to the server by

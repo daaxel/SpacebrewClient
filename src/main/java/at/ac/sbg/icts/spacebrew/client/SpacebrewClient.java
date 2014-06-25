@@ -786,6 +786,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 
 		String name = (String) message.get("name");
 		String type = (String) message.get("type");
+		String value = (String) message.get("value");
 
 		if (subscriberMethods.containsKey(name))
 		{
@@ -797,7 +798,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 
 				if (type.equals(SpacebrewMessage.TYPE_BOOLEAN))
 				{
-					method.invoke(callback, Boolean.parseBoolean((String) message.get("value")));
+					method.invoke(callback, Boolean.parseBoolean(value));
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_RANGE))
 				{
@@ -805,7 +806,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 				}
 				else if (type.equals(SpacebrewMessage.TYPE_STRING))
 				{
-					method.invoke(callback, (String) message.get("value"));
+					method.invoke(callback, value);
 				}
 			}
 			catch (InvocationTargetException e)
@@ -870,6 +871,8 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	{
 		log.error("Connection error occured!");
 		log.debug("Exception: {}", exception);
+
+		callback.onError();
 	}
 
 	/**
