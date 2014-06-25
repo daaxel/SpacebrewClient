@@ -1,4 +1,4 @@
-# Spacebrew Client 0.1.0
+# Spacebrew Client 0.2.1
 This is a Java client API library for [Spacebrew](http://docs.spacebrew.cc/). Spacebrew allows flexible routing of simple messages between WebSocket based clients. Created by Axel Baumgartner for the [HCI & Usability Unit at the ICT&S Center, University of Salzburg, Austria](http://www.icts.sbg.ac.at).
 
 Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spacebrew-processing-library) by [Brett Renfer and Julio Terra](http://rockwellgroup.com/lab).
@@ -27,7 +27,7 @@ Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spac
 * [slf4j-simple-1.7.2](http://www.slf4j.org) Required only if no other logger is used 
 
 ## Usage
-For detailed examples please take a look at [src/example/Example.java](https://github.com/daaxel/SpacebrewClient/blob/master/src/example/Example.java). A most basic example class using the library may look like this:
+For detailed examples please take a look at [src/test/java/Example.java](https://github.com/daaxel/SpacebrewClient/blob/master/src/test/java/Example.java). A most basic example class using the library may look like this:
 
 ```java
 
@@ -49,7 +49,7 @@ For detailed examples please take a look at [src/example/Example.java](https://g
 			System.out.println("Received: " + message);
 		}
         
-		 @override
+		@override
 		public void onOpen()
 		{
 			System.out.println("Connection to server opened.");
