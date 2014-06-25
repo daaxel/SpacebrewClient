@@ -74,4 +74,4 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 Contact the author at <axel.baumgartner@sbg.ac.at>.
 
 ## License
-See [license.txt](https://github.com/daaxel/SpacebrewClient/blob/master/license.txt)
+See [LICENSE.txt](https://github.com/daaxel/SpacebrewClient/blob/master/LICENSE.txt)
