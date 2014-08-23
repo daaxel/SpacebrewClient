@@ -41,7 +41,7 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 			client.connect();
 			client.addPublisher("output","");
 			client.publish("string", "Hello world!");
-   			client.addSubscriber("input", "SpacebrewMessage.TYPE_STRING", "receive");
+   			client.addSubscriber("input", SpacebrewMessage.TYPE_STRING, "receive");
 		}
         
 		public void receive(String message)
