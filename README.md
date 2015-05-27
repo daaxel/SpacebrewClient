@@ -1,7 +1,7 @@
 # Spacebrew Client 0.2.1
 This is a Java client API library for [Spacebrew](http://docs.spacebrew.cc/). Spacebrew allows flexible routing of simple messages between WebSocket based clients. Created by Axel Baumgartner for the [HCI & Usability Unit at the ICT&S Center, University of Salzburg, Austria](http://www.icts.sbg.ac.at).
 
-Modified from [spacebrew-processing-library](http://labatrockwell.github.io/spacebrew-processing-library) by [Brett Renfer and Julio Terra](http://rockwellgroup.com/lab).
+Modified from [spacebrew-processing-library](https://github.com/Spacebrew/spacebrewP5) by [Brett Renfer and Julio Terra](http://rockwellgroup.com/lab).
 
 ## Features
 * Reworked implementation from the original Spacebrew Processing library
