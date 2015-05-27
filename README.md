@@ -39,8 +39,8 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 		{
 			SpacebrewClient client = new SpacebrewClient(this, "ws://sandbox.spacebrew.cc:9000", "SpacebrewClient", "A simple Java client");
 			client.connect();
-			client.addPublisher("output","");
-			client.publish("string", "Hello world!");
+			client.addPublisher("output", SpacebrewMessage.TYPE_STRING, "");
+			client.publish("output", "Hello world!");
    			client.addSubscriber("input", SpacebrewMessage.TYPE_STRING, "receive");
 		}
         
