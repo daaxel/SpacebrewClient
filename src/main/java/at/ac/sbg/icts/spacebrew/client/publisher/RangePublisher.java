@@ -131,7 +131,7 @@ public class RangePublisher extends Publisher
 
 	/**
 	 * Sends a range message to the server. The value is transformed if If
-	 * <code>minValue</code> and <code>maxValue</code> are set.
+	 * {@code minValue} and {@code maxValue} are set.
 	 * 
 	 * @param value The value to publish
 	 */
@@ -142,7 +142,7 @@ public class RangePublisher extends Publisher
 
 	/**
 	 * Sends a range message to the server. The value is transformed if If
-	 * <code>minValue</code> and <code>maxValue</code> are set.
+	 * {@code minValue} and {@code maxValue} are set.
 	 * 
 	 * @param value The value to publish
 	 */

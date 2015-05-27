@@ -376,7 +376,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Creates a boolean publisher and adds it to <code>publishers</code>.
+	 * Creates a boolean publisher and adds it to {@code publishers}.
 	 * Updates the server about the new publisher if the client is connected.
 	 * 
 	 * @param name The name of the publisher
@@ -388,7 +388,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Creates a range publisher and adds it to <code>publishers</code>. Updates
+	 * Creates a range publisher and adds it to {@code publishers}. Updates
 	 * the server about the new publisher if the client is connected.
 	 * 
 	 * @param name The name of the publisher
@@ -400,7 +400,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Creates a String publisher and adds it to <code>publishers</code>.
+	 * Creates a String publisher and adds it to {@code publishers}.
 	 * Updates the server about the new publisher if the client is connected.
 	 * 
 	 * @param name The name of the publisher
@@ -412,14 +412,14 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Creates a publisher and adds it to <code>publishers</code>. Updates the
+	 * Creates a publisher and adds it to {@code publishers}. Updates the
 	 * server about the new publisher if the client is connected.
 	 * 
 	 * @param name The name of the publisher
 	 * @param type The type of the publisher (i.e.
-	 *            <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 *            <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 *            <code>SpacebrewMessage.TYPE_STRING</code>)
+	 *            {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 *            {@code SpacebrewMessage.TYPE_RANGE} or
+	 *            {@code SpacebrewMessage.TYPE_STRING})
 	 * @param defaultValue The default starting value
 	 */
 	public void addPublisher(String name, String type, String defaultValue)
@@ -445,9 +445,9 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	 * 
 	 * @param name The name of the subscriber
 	 * @param type The type of the subscriber (i.e.
-	 *            <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 *            <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 *            <code>SpacebrewMessage.TYPE_STRING</code>)
+	 *            {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 *            {@code SpacebrewMessage.TYPE_RANGE} or
+	 *            {@code SpacebrewMessage.TYPE_STRING})
 	 * @param methodName The name of the method in the callback object
 	 */
 	public void addSubscriber(String name, String type, String methodName)
@@ -559,9 +559,9 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	 * 
 	 * @param name The name of the subscriber
 	 * @param type The type of the subscriber (i.e.
-	 *            <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 *            <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 *            <code>SpacebrewMessage.TYPE_STRING</code>)
+	 *            {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 *            {@code SpacebrewMessage.TYPE_RANGE} or
+	 *            {@code SpacebrewMessage.TYPE_STRING})
 	 * @param subscriber The callback object
 	 */
 	private void addSubscriber(String name, String type, Object subscriber)
@@ -668,9 +668,9 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	 * 
 	 * @param name The name of the publisher
 	 * @param type The type of the subscriber (i.e.
-	 *            <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 *            <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 *            <code>SpacebrewMessage.TYPE_STRING</code>)
+	 *            {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 *            {@code SpacebrewMessage.TYPE_RANGE} or
+	 *            {@code SpacebrewMessage.TYPE_STRING})
 	 * @param value The value of the message
 	 */
 	@SuppressWarnings("unchecked")
@@ -715,7 +715,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Callback method for the <code>WebsocketClient</code> object.
+	 * Callback method for the {@code WebsocketClient} object.
 	 */
 	@Override
 	public void onOpen()
@@ -730,7 +730,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Callback method for the <code>WebsocketClient</code> object.
+	 * Callback method for the {@code WebsocketClient} object.
 	 */
 	@Override
 	public void onClose()
@@ -771,7 +771,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Callback method for the <code>WebsocketClient</code> object.
+	 * Callback method for the {@code WebsocketClient} object.
 	 * 
 	 * @param string The received message
 	 * @throws Throwable
@@ -861,9 +861,9 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	}
 
 	/**
-	 * Callback method for <code>webSocketClient</code>.
+	 * Callback method for {@code webSocketClient}.
 	 * 
-	 * @param exception The <code>Exception</code> that caused the error
+	 * @param exception The {@code Exception} that caused the error
 	 */
 	@Override
 	public void onError(Exception exception)
@@ -888,7 +888,7 @@ public class SpacebrewClient implements WebSocketClientImplCallback
 	 * the correct format, thus we check and sanitize it here.
 	 * 
 	 * @param message The unsanitized incoming range message
-	 * @return The sanitized <code>int</code> value
+	 * @return The sanitized {@code int} value
 	 */
 	private int sanitizeRangeMessage(String message)
 	{

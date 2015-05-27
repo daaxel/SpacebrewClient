@@ -30,9 +30,9 @@ public class SpacebrewMessage
 	public String				name;
 
 	/**
-	 * The type of the message (i.e. <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 * <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 * <code>SpacebrewMessage.TYPE_STRING</code>)
+	 * The type of the message (i.e. {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 * {@code SpacebrewMessage.TYPE_RANGE} or
+	 * {@code SpacebrewMessage.TYPE_STRING})
 	 */
 	public String				type;
 
@@ -42,17 +42,17 @@ public class SpacebrewMessage
 	public String				defaultValue;
 
 	/**
-	 * The <code>boolean</code> value of the message if it is a boolean message.
+	 * The {@code boolean} value of the message if it is a boolean message.
 	 */
 	public boolean				boolValue;
 
 	/**
-	 * The <code>int</code> value of the message if it is a range message.
+	 * The {@code int} value of the message if it is a range message.
 	 */
 	public int					intValue;
 
 	/**
-	 * The <code>String</code> value of the message if it is a string message.
+	 * The {@code String} value of the message if it is a string message.
 	 */
 	public String				stringValue;
 }

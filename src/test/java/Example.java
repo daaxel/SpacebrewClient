@@ -118,7 +118,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Called by <code>SpacebrewClient</code> as a callback method for the
+	 * Called by {@code SpacebrewClient} as a callback method for the
 	 * "counter" subscriber with type range.
 	 * 
 	 * @param input The received range message
@@ -129,7 +129,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Called by <code>SpacebrewClient</code> as a callback method for the
+	 * Called by {@code SpacebrewClient} as a callback method for the
 	 * "counter" subscriber with type string.
 	 * 
 	 * @param input The received string message
@@ -140,7 +140,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Called by <code>SpacebrewClient</code> as a callback method for the
+	 * Called by {@code SpacebrewClient} as a callback method for the
 	 * "time" subscriber.
 	 * 
 	 * @param input The received string message
@@ -151,7 +151,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the <code>SpacebrewClient</code> object. Will be
+	 * Callback method for the {@code SpacebrewClient} object. Will be
 	 * called when the connection to the server has been established
 	 * successfully.
 	 */
@@ -183,7 +183,7 @@ public class Example implements SpacebrewClientCallback
 
 		/**
 		 * This publisher demonstrates the use of the linear transformation and
-		 * low-pass filter in <code>RangePublisher</code>
+		 * low-pass filter in {@code RangePublisher}
 		 */
 		myRangePublisher = new RangePublisher("myRangePublisher", 0, client);
 		myRangePublisher.setMinValue(0);
@@ -216,7 +216,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the <code>SpacebrewClient</code> object. Will be
+	 * Callback method for the {@code SpacebrewClient} object. Will be
 	 * called when the connection to the server has been closed.
 	 */
 	@Override
@@ -226,7 +226,7 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the <code>SpacebrewClient</code> object. Will be
+	 * Callback method for the {@code SpacebrewClient} object. Will be
 	 * called when an exception force closed the connection to the server.
 	 */
 	@Override

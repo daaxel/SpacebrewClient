@@ -17,7 +17,7 @@ import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
 /**
- * Implements <code>WebSocketClient</code> and uses a callback interface to pass
+ * Implements {@code WebSocketClient} and uses a callback interface to pass
  * through method calls.
  * 
  * @author Axel Baumgartner
@@ -40,7 +40,7 @@ public class WebSocketClientImpl extends WebSocketClient
 	}
 
 	/**
-	 * Called by <code>WebSocketClient</code> and passes the call through to the
+	 * Called by {@code WebSocketClient} and passes the call through to the
 	 * callback object.
 	 */
 	@Override
@@ -50,7 +50,7 @@ public class WebSocketClientImpl extends WebSocketClient
 	}
 
 	/**
-	 * Called by <code>WebSocketClient</code> and passes the call through to the
+	 * Called by {@code WebSocketClient} and passes the call through to the
 	 * callback object.
 	 */
 	@Override
@@ -60,7 +60,7 @@ public class WebSocketClientImpl extends WebSocketClient
 	}
 
 	/**
-	 * Called by <code>WebSocketClient</code> and passes the call through to the
+	 * Called by {@code WebSocketClient} and passes the call through to the
 	 * callback object.
 	 * 
 	 * @param code The status code of the WebSocket close control frame as
@@ -77,10 +77,10 @@ public class WebSocketClientImpl extends WebSocketClient
 	}
 
 	/**
-	 * Called by <code>WebSocketClient</code> and passes the call through to the
+	 * Called by {@code WebSocketClient} and passes the call through to the
 	 * callback object.
 	 * 
-	 * @param ex The <code>Exception</code> that caused the error
+	 * @param ex The {@code Exception} that caused the error
 	 */
 	@Override
 	public void onError(Exception ex)

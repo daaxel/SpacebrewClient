@@ -14,7 +14,7 @@ package at.ac.sbg.icts.spacebrew.client;
  * Interface contract for objects that want to act as a callback object for
  * {@link SpacebrewClient} objects. Note that the callback methods for incoming
  * messages are not defined in this interface, but will be called by
- * <code>SpacebrewClient</code> via reflection.
+ * {@code SpacebrewClient} via reflection.
  * 
  * @author Axel Baumgartner
  */

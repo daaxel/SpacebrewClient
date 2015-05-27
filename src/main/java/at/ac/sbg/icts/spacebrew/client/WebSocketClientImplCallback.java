@@ -38,7 +38,7 @@ public interface WebSocketClientImplCallback
 	/**
 	 * Called when an exception occurred during the lifetime of the connection.
 	 * 
-	 * @param exception The <code>Exception</code> that caused the error
+	 * @param exception The {@code Exception} that caused the error
 	 */
 	public void onError(Exception exception);
 }

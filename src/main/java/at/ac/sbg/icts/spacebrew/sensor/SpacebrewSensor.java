@@ -19,7 +19,7 @@ import at.ac.sbg.icts.spacebrew.client.publisher.Publisher;
 import at.ac.sbg.icts.spacebrew.client.publisher.RangePublisher;
 
 /**
- * A <code>SpacebrewSensor</code> is used to publish data from a hardware sensor
+ * A {@code SpacebrewSensor} is used to publish data from a hardware sensor
  * to Spacebrew. A single hardware sensor (e.g. accelerometer) may offer
  * different sensor values (e.g. acceleration in three axis) which are then
  * represented by individual publishers. For the sensor to work the following
@@ -115,9 +115,9 @@ public abstract class SpacebrewSensor
 	 * 
 	 * @param publisher The publisher to infer the type from
 	 * @return The type of the publisher (i.e.
-	 *         <code>SpacebrewMessage.TYPE_BOOLEAN</code>,
-	 *         <code>SpacebrewMessage.TYPE_RANGE</code> or
-	 *         <code>SpacebrewMessage.TYPE_STRING</code>)
+	 *         {@code SpacebrewMessage.TYPE_BOOLEAN},
+	 *         {@code SpacebrewMessage.TYPE_RANGE} or
+	 *         {@code SpacebrewMessage.TYPE_STRING})
 	 */
 	private String getType(Publisher publisher)
 	{
