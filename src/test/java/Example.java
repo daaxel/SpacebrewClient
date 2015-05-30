@@ -18,7 +18,7 @@ import at.ac.sbg.icts.spacebrew.client.publisher.StringPublisher;
 /**
  * Demonstrates how to use {@link SpacebrewClient}. Every second new data is
  * sent. The boolean publisher "switch" alternates between true/false, the range
- * publishers "counter" count from 0 to 1023 and the string publisher "time"
+ * publisher "counter" counts from 0 to 1023 and the string publisher "time"
  * sends the current time. The boolean publisher "boolean" repeats the output
  * from the "switch" publisher and the string publisher "string" repeats the
  * output from the "time" publisher. Finally the "range" publisher sends a
@@ -103,8 +103,6 @@ public class Example implements SpacebrewClientCallback
 		client.connect();
 	}
 
-	Object	test	= null;
-
 	/**
 	 * Called by SpacebrewClient as a callback method for the "switch"
 	 * subscriber.
@@ -114,12 +112,11 @@ public class Example implements SpacebrewClientCallback
 	public void switchInput(boolean input)
 	{
 		log.info("The switch turns: " + (input ? "on" : "off"));
-		log.info("" + test.getClass());
 	}
 
 	/**
-	 * Called by {@code SpacebrewClient} as a callback method for the
-	 * "counter" subscriber with type range.
+	 * Called by {@code SpacebrewClient} as a callback method for the "counter"
+	 * subscriber with type range.
 	 * 
 	 * @param input The received range message
 	 */
@@ -129,8 +126,8 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Called by {@code SpacebrewClient} as a callback method for the
-	 * "counter" subscriber with type string.
+	 * Called by {@code SpacebrewClient} as a callback method for the "counter"
+	 * subscriber with type string.
 	 * 
 	 * @param input The received string message
 	 */
@@ -140,8 +137,8 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Called by {@code SpacebrewClient} as a callback method for the
-	 * "time" subscriber.
+	 * Called by {@code SpacebrewClient} as a callback method for the "time"
+	 * subscriber.
 	 * 
 	 * @param input The received string message
 	 */
@@ -151,9 +148,8 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the {@code SpacebrewClient} object. Will be
-	 * called when the connection to the server has been established
-	 * successfully.
+	 * Callback method for the {@code SpacebrewClient} object. Will be called
+	 * when the connection to the server has been established successfully.
 	 */
 	@Override
 	public void onOpen()
@@ -216,8 +212,8 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the {@code SpacebrewClient} object. Will be
-	 * called when the connection to the server has been closed.
+	 * Callback method for the {@code SpacebrewClient} object. Will be called
+	 * when the connection to the server has been closed.
 	 */
 	@Override
 	public void onClose()
@@ -226,8 +222,8 @@ public class Example implements SpacebrewClientCallback
 	}
 
 	/**
-	 * Callback method for the {@code SpacebrewClient} object. Will be
-	 * called when an exception force closed the connection to the server.
+	 * Callback method for the {@code SpacebrewClient} object. Will be called
+	 * when an exception force closed the connection to the server.
 	 */
 	@Override
 	public void onError()
