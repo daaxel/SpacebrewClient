@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import at.ac.sbg.icts.spacebrew.client.BooleanSubscriber;
 
 /**
- * A boolean subscriber that simple logs the incoming boolean value.
+ * A simple boolean subscriber that logs the incoming boolean value.
  * 
  * @author Axel Baumgartner
  */
