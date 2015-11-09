@@ -199,7 +199,7 @@ public class Example implements SpacebrewClientCallback
 		// TODO add examples for SpacebrewSensorManager and SpacebrewSensor
 
 		// Do your stuff in a different thread to not block the main thread
-		// (with a never ending loop like in this example).
+		// (with an infinite loop like in this example).
 		Thread thread = new Thread()
 		{
 			@Override

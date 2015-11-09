@@ -1,5 +1,5 @@
 # Spacebrew Client 0.2.1
-This is a Java client API library for [Spacebrew](http://docs.spacebrew.cc/). Spacebrew allows flexible routing of simple messages between WebSocket based clients. Created by Axel Baumgartner for the [HCI & Usability Unit at the ICT&S Center, University of Salzburg, Austria](http://www.icts.sbg.ac.at).
+This is a Java client API library for [Spacebrew](http://docs.spacebrew.cc/). Spacebrew allows flexible routing of simple messages between WebSocket based clients. Created by Axel Baumgartner for the [Center for Human-Computer Interaction, University of Salzburg, Austria](http://www.icts.sbg.ac.at).
 
 Modified from [spacebrew-processing-library](https://github.com/Spacebrew/spacebrewP5) by [Brett Renfer and Julio Terra](http://rockwellgroup.com/lab).
 
@@ -71,20 +71,32 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 ```
 ## FAQ
 
-If you get the error ``"Could not pass incoming spacebrew message to callback, exception occurred 
-while calling callback method for subscriber... "`` then the code you wrote when receiving a message as 
-a subscriber throws an exception. Check the method you specified as callback. If you configure slf4j to use the debug log level, you will be 
-able to see the stacktrace of the cause. If you use SimpleLogger you can do this quickly by adding this line to your code:
+* How can I change the value that a publisher is sending?
+>Publishers only send data when you tell them to via the `publish()` method. Use `client.publish("output", "Hello world!");` to send the message `Hello world!` via the publisher `output`. If you 
 
-```java
+* How can I change the name or type of a publisher?
+>You can’t change the name directly. You have to remove the publisher from the client and create a new publisher with the desired name or type. For example if you want to change the name and type of the `output` publisher from the above example use:
+>
+>```java
+client.removePublisher("output", SpacebrewMessage.TYPE_STRING);
+client.addPublisher("differentOutput", SpacebrewMessage.TYPE_RANGE);
+```
+
+* I am using an infinite loop (or game loop) in my program but don't want to connect and disconnect everytime the loop cycles. How do I keep the connection and only send data when necessary?
+>Check out the detailed example [src/test/java/Example.java](https://github.com/daaxel/SpacebrewClient/blob/master/src/test/java/Example.java). The main class uses an infinite loop and demonstrates how the method calls of  `client.connect()` and `client.publish()` are separated.
+
+* My code compiles, but while running the program I receive the following exception: ``"Could not pass incoming spacebrew message to callback, exception occurred 
+while calling callback method for subscriber with name... "``
+>This happens when your code in your `receive()` implementation throws an exception. Check the method you specified as callback. If you configure slf4j to use the DEBUG log level, you will be able to see the stack trace of the cause.
+
+* How do I enable the DEBUG log level?
+>If you use SimpleLogger you can do this simply by adding this line to the beginning of your main class:
+>```java
 System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "DEBUG");
 ```
- 
-
-
 
 ## Support
-Contact the author at <axel.baumgartner@sbg.ac.at>.
+Contact the author at <contact@axelbaumgartner.at>.
 
 ## License
 See [LICENSE.txt](https://github.com/daaxel/SpacebrewClient/blob/master/LICENSE.txt)
