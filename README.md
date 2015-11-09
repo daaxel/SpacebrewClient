@@ -76,19 +76,21 @@ For detailed examples please take a look at [src/test/java/Example.java](https:/
 
 * How can I change the name or type of a publisher?
 >You can’t change the name directly. You have to remove the publisher from the client and create a new publisher with the desired name or type. For example if you want to change the name and type of the `output` publisher from the above example use:
->
->```java
+```java
 client.removePublisher("output", SpacebrewMessage.TYPE_STRING);
 client.addPublisher("differentOutput", SpacebrewMessage.TYPE_RANGE);
 ```
+
 * I am using an infinite loop (or game loop) in my program but don't want to connect and disconnect everytime the loop cycles. How do I keep the connection and only send data when necessary?
 >Check out the detailed example [src/test/java/Example.java](https://github.com/daaxel/SpacebrewClient/blob/master/src/test/java/Example.java). The main class uses an infinite loop and demonstrates how the method calls of  `client.connect()` and `client.publish()` are separated.
+
 * My code compiles, but while running the program I receive the following exception: ``"Could not pass incoming spacebrew message to callback, exception occurred 
 while calling callback method for subscriber with name... "``
 >This happens when your code in your `receive()` implementation throws an exception. Check the method you specified as callback. If you configure slf4j to use the DEBUG log level, you will be able to see the stack trace of the cause.
+
 * How do I enable the DEBUG log level?
 >If you use SimpleLogger you can do this simply by adding this line to the beginning of your main class:
->```java
+```java
 System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "DEBUG");
 ```
 
